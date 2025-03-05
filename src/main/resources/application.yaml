@@ -1,2 +1,3 @@
 kafka:
-  topic: "processed-orders"
+  outbox-topic: "processed-orders"
+  outbox-polling-ms: 3000

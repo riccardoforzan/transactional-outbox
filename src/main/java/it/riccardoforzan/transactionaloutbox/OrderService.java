@@ -17,7 +17,7 @@ public class OrderService {
     private final ObjectMapper objectMapper;
     private final OutboxRepository outboxRepository;
 
-    public OrderService(OrderRepository orderRepository, @Value("${kafka.topic}") String topic, ObjectMapper objectMapper, OutboxRepository outboxRepository) {
+    public OrderService(OrderRepository orderRepository, @Value("${kafka.outbox-topic}") String topic, ObjectMapper objectMapper, OutboxRepository outboxRepository) {
         this.orderRepository = orderRepository;
         this.topic = topic;
         this.objectMapper = objectMapper;
